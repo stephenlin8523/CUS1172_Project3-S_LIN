@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Quiz Start Page -->
+        <div id="startPage">
+            <h1>Welcome to the Online Quiz!</h1>
+            <form id="startForm">
+                <input type="text" id="studentName" placeholder="Enter your name" required>
+                <select id="quizSelect" required>
+                    <option value="" disabled selected>Select Quiz</option>
+                    <option value="quiz1">Quiz 1</option>
+                    <option value="quiz2">Quiz 2</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Start Quiz</button>
+            </form>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quizPage" style="display: none;">
+            <!-- Quiz questions will be dynamically rendered here -->
+        </div>
+
+        <!-- Quiz Result Page -->
+        <div id="resultPage" style="display: none;">
+            <!-- Quiz result will be shown here -->
+        </div>
+    </div>
+
+    <!-- Handlebars Templates -->
+    <script id="quiz-template" type="text/x-handlebars-template">
+        <!-- Handlebars template for rendering quiz questions -->
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
